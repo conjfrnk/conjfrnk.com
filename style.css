@@ -24,6 +24,18 @@ body {
 	grid-template-columns: repeat(12, 1fr);
 }
 
+.darkgroup {
+    background-color: #eee;
+    padding-top: 1px;
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
+.lightgroup {
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+
 #dhead {
 	margin-top: 20px;
 }
