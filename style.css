@@ -44,7 +44,7 @@ a:hover {
 }
 
 #dhead {
-    margin-top: 20px;
+    margin-top: 36px;
 }
 #dpic {
     grid-column: span 6;
@@ -160,10 +160,10 @@ hr {
         color: #00ffff;
     }
     .darkgroup {
-        background-color: #657595;
-        color: black;
+        background-color: #2f3441;
+        color: white;
         a {
-            color: #32CD32
+            color: #32cd32;
         }
         a:hover {
             color: #ff6347;
@@ -173,10 +173,10 @@ hr {
         color: white;
     }
     .ico {
-        border-left: 2px solid #32CD32;
+        border-left: 2px solid #32cd32;
     }
     .entry-dot {
-        background-color: #32CD32;
+        background-color: #32cd32;
     }
     .iico {
         filter: invert(100%);
