@@ -2,4 +2,4 @@
 
 gzip -9fk style.css
 gzip -9fk *.html
-find assets/ -type f ! -name '*.png' -exec gzip -9fk "{}" \;
+find assets/ -type f ! -exec gzip -9fk "{}" \;
