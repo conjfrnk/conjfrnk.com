@@ -5,9 +5,12 @@
 
 table.progress {
     margin: 1em;
+    display: inline-block;
+    margin-right: 1em;
 }
 table.progress td {
     text-align: center;
+    font-size: 14px;
     border: 1px solid #000000;
     padding: 0;
     width: 2.2em;
