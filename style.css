@@ -16,6 +16,14 @@ a:hover {
     height: auto;
 }
 
+img.projecteuler {
+    box-shadow: 0;
+    transition: box-shadow 0.5s ease-out;
+}
+img.projecteuler:hover {
+    box-shadow: 0 0 1em #000000;
+}
+
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -190,6 +198,9 @@ hr {
         background-color: white;
         padding: 1px;
         border-radius: 2px;
+    }
+    img.projecteuler:hover {
+        box-shadow: 0 0 1em #ffffff;
     }
     hr {
         background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
