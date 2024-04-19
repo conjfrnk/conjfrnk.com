@@ -1,6 +1,16 @@
-.scrollable-table {
-    overflow-x: auto;
+.progress-container {
     width: 100%;
+    background-color: lightgrey;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 30px;
+    background-color: green;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-weight: bold;
 }
 
 table.progress {

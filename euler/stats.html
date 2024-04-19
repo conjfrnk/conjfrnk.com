@@ -17,6 +17,23 @@
         <div class="darkgroup">
             <div class="container">
                 <div class="ctitle">Progress</div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progressBar">0%</div>
+                </div>
+                <script>
+                    function updateProgressBar() {
+                        var completedElements = document.querySelectorAll('td.completed').length;
+                        var totalElements = document.querySelectorAll('td').length;
+                        var progressBar = document.getElementById('progressBar');
+                        var percentage = (completedElements / totalElements) * 100;
+                        progressBar.style.width = percentage + '%';
+                        progressBar.textContent = percentage.toFixed(1) + '%';
+                    }
+                    window.onload = function() {
+                        updateProgressBar();
+                    };
+                </script>
+                <br>
                 <table class="progress">
                     <tr>
                         <td class="completed"><a href="https://projecteuler.net/problem=1" title="Multiples of 3 or 5">1</a></td>
@@ -99,7 +116,7 @@
                         <td class="open"><a href="https://projecteuler.net/problem=66" title="Diophantine Equation">66</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=67" title="Maximum Path Sum II">67</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=68" title="Magic 5-gon Ring">68</a></td>
-                        <td class="open"><a href="https://projecteuler.net/problem=69" title="Totient Maximum">69</a></td>
+                        <td class="completed"><a href="https://projecteuler.net/problem=69" title="Totient Maximum">69</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=70" title="Totient Permutation">70</a></td>
                     </tr>
                     <tr>
@@ -731,7 +748,7 @@
                         <td class="open"><a href="https://projecteuler.net/problem=584" title="Birthday Problem Revisited">584</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=585" title="Nested Square Roots">585</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=586" title="Binary Quadratic Form">586</a></td>
-                        <td class="open"><a href="https://projecteuler.net/problem=587" title="Concave Triangle">587</a></td>
+                        <td class="completed"><a href="https://projecteuler.net/problem=587" title="Concave Triangle">587</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=588" title="Quintinomial Coefficients">588</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=589" title="Poohsticks Marathon">589</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=590" title="Sets with a Given Least Common Multiple">590</a></td>
