@@ -18,6 +18,9 @@ for csv_file in csv_files:
     # Filter out rows where 'Book' is NaN before cleaning the 'Pages' column
     df = df.dropna(subset=["Book"])
 
+    # Filter to include only rows where '?' column has 'X'
+    df = df[df["?"] == "X"]
+
     # Remove commas from the Pages column and convert to integer where possible
     df["Pages"] = df["Pages"].astype(str).str.replace(",", "")
     df["Pages"] = pd.to_numeric(df["Pages"], errors="coerce").fillna(0).astype(int)
