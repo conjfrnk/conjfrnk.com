@@ -2,6 +2,8 @@
 
 <html lang="en">
     <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K7744E4T"></script>
         <script defer nonce="analytics">
@@ -13,25 +15,41 @@
         <title>Project Euler Stats</title>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+        <link rel="canonical" href="https://conjfrnk.com/euler/stats.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Project Euler Stats">
+        <meta property="og:description" content="Connor's Project Euler problem progress.">
+        <meta property="og:url" content="https://conjfrnk.com/euler/stats.html">
+        <meta property="og:image" content="https://projecteuler.net/profile/conjfrnk.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Project Euler Stats">
+        <meta name="twitter:description" content="Connor's Project Euler problem progress.">
+        <meta name="twitter:image" content="https://projecteuler.net/profile/conjfrnk.png">
+        <link rel="icon" href="/favicon.ico">
         <link href="../style.css" rel="stylesheet" type="text/css"/>
         <link href="euler.css" rel="stylesheet" type="text/css"/>
+        <script src="progressbar.js" defer></script>
     </head>
     <body>
+        <header>
         <div class="container" id="dhead">
             <h1>Project Euler Stats</h1>
             <br>
             <a href="https://projecteuler.net"><img src="https://projecteuler.net/profile/conjfrnk.png" width=200 height=60 alt="Link to Project Euler" loading="lazy" class="projecteuler" /></a>
         </div>
+        </header>
+        <main id="main">
         <div class="darkgroup">
             <div class="container">
                 <div class="ctitle">Progress</div>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar">0%</div>
+                <div class="progress-container" role="progressbar" aria-label="Euler progress">
+                    <div class="progress-bar" id="progressBar" aria-live="polite">0%</div>
                 </div>
-                <script>
-                </script>
+                <script></script>
                 <br>
-                <table class="progress">
+                 <table class="progress">
+                    <caption>Problems 301–400</caption>
+                    <caption>Problems 1–100</caption>
                     <tr>
                         <td class="completed"><a href="https://projecteuler.net/problem=1" title="Multiples of 3 or 5">1</a></td>
                         <td class="completed"><a href="https://projecteuler.net/problem=2" title="Even Fibonacci Numbers">2</a></td>
@@ -153,7 +171,8 @@
                         <td class="open"><a href="https://projecteuler.net/problem=100" title="Arranged Probability">100</a></td>
                     </tr>
                 </table>
-                <table class="progress">
+                 <table class="progress">
+                    <caption>Problems 401–500</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=101" title="Optimum Polynomial">101</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=102" title="Triangle Containment">102</a></td>
@@ -275,7 +294,8 @@
                         <td class="open"><a href="https://projecteuler.net/problem=200" title="Prime-proof Squbes">200</a></td>
                     </tr>
                 </table>
-                <table class="progress">
+                 <table class="progress">
+                    <caption>Problems 501–600</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=201" title="Subsets with a Unique Sum">201</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=202" title="Laserbeam">202</a></td>
@@ -397,7 +417,8 @@
                         <td class="open"><a href="https://projecteuler.net/problem=300" title="Protein Folding">300</a></td>
                     </tr>
                 </table>
-                <table class="progress">
+                 <table class="progress">
+                    <caption>Problems 601–700</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=301" title="Nim">301</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=302" title="Strong Achilles Numbers">302</a></td>
@@ -519,7 +540,8 @@
                         <td class="open"><a href="https://projecteuler.net/problem=400" title="Fibonacci Tree Game">400</a></td>
                     </tr>
                 </table>
-                <table class="progress">
+                 <table class="progress">
+                    <caption>Problems 701–800</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=401" title="Sum of Squares of Divisors">401</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=402" title="Integer-valued Polynomials">402</a></td>
@@ -641,7 +663,8 @@
                         <td class="open"><a href="https://projecteuler.net/problem=500" title="Problem 500!!!">500</a></td>
                     </tr>
                 </table>
-                <table class="progress">
+                 <table class="progress">
+                    <caption>Problems 801–900</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=501" title="Eight Divisors">501</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=502" title="Counting Castles">502</a></td>
@@ -764,6 +787,7 @@
                     </tr>
                 </table>
                 <table class="progress">
+                    <caption>Problems 901–1000</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=601" title="Divisibility Streaks">601</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=602" title="Product of Head Counts">602</a></td>
@@ -1115,6 +1139,7 @@
                 </table>
             </div>
         </div>
+        </main>
         <div class="lightgroup">
             <div class="container">
                 <div class="ctitle"><a href="https://conjfrnk.com">Home</a></div>

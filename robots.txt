@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://conjfrnk.com/sitemap
+Sitemap: https://conjfrnk.com/sitemap.xml

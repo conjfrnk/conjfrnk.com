@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com">
+        <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K7744E4T"></script>
         <script defer nonce="analytics">
@@ -13,12 +15,25 @@
         <meta charset="utf-8">
         <meta name="description" content="Connor Frank's Reading List">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="canonical" href="https://conjfrnk.com/books.html">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Reading List">
+        <meta property="og:description" content="All the books I've read, grouped by year.">
+        <meta property="og:url" content="https://conjfrnk.com/books.html">
+        <meta property="og:image" content="https://conjfrnk.com/assets/duolingo.svg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Reading List">
+        <meta name="twitter:description" content="All the books I've read, grouped by year.">
+        <meta name="twitter:image" content="https://conjfrnk.com/assets/duolingo.svg">
+        <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+        <header>
         <div id="dhead" class="container">
             <h1>Reading List</h1>
         </div>
+        </header>
 
         <div class="darkgroup">
             <div class="container">
@@ -32,6 +47,7 @@
             </div>
         </div>
 
+        <main id="main">
         <div id="book-lists"></div>
         <script nonce="books">
         fetch("reading/lists.html")
@@ -41,6 +57,7 @@
           })
           .catch(error => console.error('Error loading book lists:', error));
         </script>
+        </main>
 
         <div class="lightgroup">
             <div class="container">
