@@ -1,16 +1,20 @@
 .progress-container {
     width: 100%;
-    background-color: lightgrey;
+    background-color: var(--bg-dark-card);
+    border-radius: 4px;
+    overflow: hidden;
 }
 
 .progress-bar {
     width: 0%;
-    height: 30px;
-    background-color: green;
+    height: 32px;
+    background: linear-gradient(135deg, var(--green-primary), var(--green-secondary));
     text-align: center;
-    line-height: 30px;
-    color: white;
+    line-height: 32px;
+    color: var(--text-white);
     font-weight: bold;
+    font-size: 0.9rem;
+    transition: width 0.6s ease;
 }
 
 table.progress {
@@ -21,7 +25,7 @@ table.progress {
 table.progress td {
     text-align: center;
     font-size: 14px;
-    border: 1px solid #000000;
+    border: 1px solid var(--green-muted);
     padding: 0;
     width: 2.2em;
 }
@@ -35,17 +39,17 @@ table.progress a {
     text-decoration: none;
 }
 table.progress a:hover {
-    border: 2px solid #ff6347;
+    border: 2px solid var(--gold);
 }
 
 td.open {
-    background: lightgrey;
-    color: black;
+    background: var(--bg-dark-card);
+    color: var(--text-light-gray);
     padding: 0 0.2em;
 }
 td.completed {
-    background: green;
-    color: white;
+    background: var(--green-primary);
+    color: var(--text-white);
     padding: 0 0.2em;
     font-weight: bold;
 }

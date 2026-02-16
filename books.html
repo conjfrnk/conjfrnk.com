@@ -26,6 +26,7 @@
         <meta name="twitter:description" content="All the books I've read, grouped by year.">
         <meta name="twitter:image" content="https://conjfrnk.com/assets/duolingo.svg">
         <link rel="icon" href="/favicon.ico">
+        <meta name="theme-color" content="#191E19">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
@@ -35,7 +36,7 @@
         </div>
         </header>
 
-        <div class="darkgroup">
+        <div class="section-light">
             <div class="container">
                 <div class="ctitle">Background</div>
                 I read a lot of books. Oftentimes, people ask me for recommendations on what to read. To help those people find a book to read, I have put together this list. Below are all the books I have read, grouped by the year in which I read them. I am working on creating a fancier method to display these books, but for now this simple list, which is generated from my yearly reading spreadsheets (script <a href="https://github.com/conjfrnk/conjfrnk.com/blob/main/reading/generate.py">here</a>), will have to do.
@@ -50,6 +51,7 @@
         <main id="main">
         <div id="book-lists"></div>
         <script nonce="books">
+        // Loads same-origin generated book list HTML from reading/lists.html
         fetch("reading/lists.html")
           .then(response => response.text())
           .then(data => {
@@ -59,9 +61,9 @@
         </script>
         </main>
 
-        <div class="lightgroup">
+        <div class="section-dark">
             <div class="container">
-                <div class="ctitle"><a href="https://conjfrnk.com">Home</a></div>
+                <div class="home-link"><a href="https://conjfrnk.com">Home</a></div>
             </div>
         </div>
     </body>

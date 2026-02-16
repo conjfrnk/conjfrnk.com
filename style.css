@@ -1,197 +1,449 @@
+/* ===== Detent / Porsche-Inspired Palette ===== */
+:root {
+    --bg-dark: #191E19;
+    --bg-dark-card: #232823;
+    --bg-light: #F2EDE4;
+    --bg-white: #FFFFFF;
+    --green-primary: #1B5E3B;
+    --green-secondary: #2A7A4F;
+    --green-muted: #3D6B4F;
+    --gold: #C4A94F;
+    --gold-muted: #A89050;
+    --red: #D4453A;
+    --text-white: #FFFFFF;
+    --text-offwhite: #E8E3DA;
+    --text-light-gray: #A0A5A0;
+    --text-mid-gray: #787D78;
+    --text-dark: #1A1F1A;
+    --text-muted: #6B706B;
+    --font-display: Georgia, 'Times New Roman', serif;
+    --font-body: Calibri, 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ===== Base ===== */
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--bg-dark);
+    font-family: var(--font-body);
     font-size: 16px;
-    line-height: 1.5;
-    color: black;
+    line-height: 1.6;
+    color: var(--text-white);
+    border-top: 4px solid var(--green-primary);
+}
+
+a {
+    color: var(--gold);
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 a:hover {
-    color: #ff6347;
+    color: var(--green-secondary);
 }
 
-.responsive-image {
-    max-width: 100%;
-    height: auto;
-}
-
-img.sitelink:hover {
-    border: 2px solid #ff6347;
-}
-
+/* ===== Layout ===== */
 .container {
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
-@media (min-width: 992px) {
-    .container {
-        width: 970px;
-    }
-}
+
 .row {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    gap: 0;
 }
 
+/* ===== Sections — Dark/Light Sandwich ===== */
+.section-dark {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    padding: 3rem 0;
+}
+.section-dark a {
+    color: var(--gold);
+}
+.section-dark a:hover {
+    color: var(--green-secondary);
+}
+
+.section-light {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 3rem 0;
+}
+.section-light a {
+    color: var(--green-primary);
+}
+.section-light a:hover {
+    color: var(--gold-muted);
+}
+
+/* Legacy classes mapped to new system */
 .darkgroup {
-    background-color: #eee;
-    padding-top: 1px;
-    margin-top: 20px;
-    padding-bottom: 30px;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    padding: 3rem 0;
 }
-.lightgroup {
-    margin-top: 20px;
-    padding-bottom: 30px;
+.darkgroup a {
+    color: var(--green-primary);
+}
+.darkgroup a:hover {
+    color: var(--gold-muted);
 }
 
+.lightgroup {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    padding: 3rem 0;
+}
+.lightgroup a {
+    color: var(--gold);
+}
+.lightgroup a:hover {
+    color: var(--green-secondary);
+}
+
+/* ===== Header ===== */
 #dhead {
-    margin-top: 36px;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
 }
 #dpic {
-    grid-column: span 6;
+    grid-column: span 5;
     text-align: right;
+    padding-right: 2rem;
 }
 #ddesc {
-    padding-top: 40px;
-    padding-left: 20px;
-    grid-column: span 6;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    grid-column: span 7;
 }
 @media (max-width: 991px) {
     #dpic {
         grid-column: span 12;
         text-align: center;
+        padding-right: 0;
     }
     #ddesc {
         grid-column: span 12;
-        padding-top: 20px;
+        padding-top: 1.5rem;
+        padding-left: 0;
         text-align: center;
     }
 }
+
+/* ===== Profile Image ===== */
+#dpic img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 3px solid var(--green-primary);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Typography ===== */
 h1 {
-    font-size: 34px;
-    font-weight: normal;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: bold;
     padding: 0;
     margin: 0;
+    letter-spacing: -0.02em;
 }
 h2 {
+    font-family: var(--font-body);
     font-weight: normal;
     font-style: italic;
-    color: #385d24;
-    font-size: 18px;
+    color: var(--text-light-gray);
+    font-size: 1.1rem;
     padding: 0;
-    margin: 5px 0 10px 0;
+    margin: 0.4rem 0 1rem 0;
 }
 @media (min-width: 992px) {
     h2 {
-        max-width: 300px;
+        max-width: 360px;
     }
 }
-#dpic img {
-    width: 240px;
-    height: 240px;
-    border-radius: 120px;
+
+.ctitle {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    letter-spacing: -0.01em;
+}
+
+/* ===== Social Icons ===== */
+#dico {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+@media (max-width: 991px) {
+    #dico {
+        justify-content: center;
+    }
 }
 .iico {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
-.img-bg {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.iico:hover {
+    opacity: 1;
+    transform: translateY(-2px);
 }
+
+/* ===== Divider ===== */
 hr {
     height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
-    padding: 0;
-    margin: 20px 0px 20px 0px;
+    background: linear-gradient(to right, transparent, var(--green-muted), transparent);
     border: 0;
+    margin: 0;
+    padding: 0;
 }
+
+/* ===== Timeline ===== */
 .ico {
     grid-column: span 1;
     vertical-align: top;
-    border-left: 2px solid #385d24;
+    border-left: 2px solid var(--green-primary);
     position: relative;
 }
 .ico img {
-    border-radius: 5px;
+    border-radius: 6px;
     width: 100%;
     max-width: 80px;
-    margin-left: 10px;
+    margin-left: 12px;
 }
 .desc {
     grid-column: span 10;
     vertical-align: top;
-    font-size: 17px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    font-size: 1rem;
+    padding-left: 1.25rem;
+    padding-bottom: 1.5rem;
+    line-height: 1.7;
 }
 .entry-dot {
     position: absolute;
     top: 5px;
     left: -6px;
-    width: 8px;
-    height: 8px;
-    border-radius: 10px;
-    background-color: #385d24;
-    border: 1px solid white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--green-secondary);
+    border: 2px solid var(--bg-dark);
 }
 .timespan {
     grid-column: span 1;
-    font-size: 14px;
+    font-size: 0.85rem;
     text-align: right;
-    padding-right: 5px;
-    color: #385d24;
-}
-.ctitle {
-    font-size: 36px;
-    margin-bottom: 20px;
-    margin-top: 40px;
+    padding-right: 8px;
+    color: var(--text-light-gray);
+    font-weight: bold;
+    letter-spacing: 0.02em;
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: #262a33;
-        color: white;
+/* ===== Responsive Image ===== */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    background-color: var(--bg-white);
+    padding: 2px;
+    border-radius: 4px;
+}
+
+/* ===== Image Background Fix for Dark Sections ===== */
+.img-bg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    background-color: var(--bg-white);
+    padding: 2px;
+    border-radius: 4px;
+}
+
+/* ===== Projects Grid ===== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+}
+.project-card {
+    background: var(--bg-white);
+    border-left: 4px solid var(--green-primary);
+    padding: 1rem 1.25rem;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.project-card .project-date {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.25rem;
+}
+.project-card .project-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-dark);
+}
+.project-card .project-name a {
+    color: var(--green-primary);
+}
+.project-card .project-name a:hover {
+    color: var(--gold-muted);
+}
+.project-card .project-detail {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-top: 0.25rem;
+}
+.project-card .project-detail a {
+    color: var(--green-secondary);
+}
+
+/* ===== Interests Section ===== */
+.interests-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+}
+.interest-item {
+    background: var(--bg-dark-card);
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    transition: transform 0.15s ease;
+    border-top: 3px solid var(--green-primary);
+}
+.interest-item:hover {
+    transform: translateY(-2px);
+}
+.interest-item img {
+    display: block;
+}
+
+/* ===== Site Links ===== */
+img.sitelink {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+img.sitelink:hover {
+    border-color: var(--gold);
+}
+
+/* ===== Lists (for subpages) ===== */
+ul {
+    padding-left: 1.25rem;
+}
+li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* ===== Footer / Home Link ===== */
+.home-link {
+    text-align: center;
+    padding: 2rem 0;
+}
+.home-link a {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    color: var(--gold);
+    border: 1px solid var(--green-muted);
+    padding: 0.6rem 2rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+.home-link a:hover {
+    background-color: var(--green-primary);
+    color: var(--text-white);
+    border-color: var(--green-primary);
+}
+
+/* ===== Section-Light Specific Overrides ===== */
+.section-light .entry-dot,
+.darkgroup .entry-dot {
+    background-color: var(--green-primary);
+    border-color: var(--bg-light);
+}
+.section-light .timespan,
+.darkgroup .timespan {
+    color: var(--text-muted);
+}
+.section-light .ico,
+.darkgroup .ico {
+    border-left-color: var(--green-primary);
+}
+
+/* ===== Books page styling ===== */
+.darkgroup .ctitle,
+.section-light .ctitle {
+    color: var(--text-dark);
+}
+.lightgroup .ctitle {
+    color: var(--text-white);
+}
+.darkgroup p,
+.section-light p {
+    color: var(--text-muted);
+}
+
+/* Dark card for other-stuff on dark backgrounds */
+.dark-card {
+    background: var(--bg-dark-card);
+    padding: 1.25rem 1.5rem;
+    border-radius: 4px;
+    border-top: 3px solid var(--green-primary);
+}
+.dark-card a {
+    color: var(--gold);
+}
+.dark-card a:hover {
+    color: var(--green-secondary);
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 991px) {
+    .container {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
     }
-    a {
-        color: #00ffff;
+    h1 {
+        font-size: 2rem;
     }
-    .darkgroup {
-        background-color: #2f3441;
-        color: white;
+    .ctitle {
+        font-size: 1.75rem;
     }
-    .darkgroup a { color: #32cd32; }
-    .darkgroup a:hover { color: #ff6347; }
-    h1, h2, .timespan, .desc {
-        color: white;
+    .project-grid {
+        grid-template-columns: 1fr;
     }
-    .ico {
-        border-left: 2px solid #32cd32;
+    .desc {
+        grid-column: span 10;
     }
-    .entry-dot {
-        background-color: #32cd32;
+}
+
+@media (max-width: 600px) {
+    .timespan {
+        font-size: 0.75rem;
     }
-    .iico {
-        filter: invert(100%);
-    }
-    .img-bg {
-        background-color: white;
-        padding: 1px;
-        border-radius: 2px;
-    }
-    .responsive-image {
-        background-color: white;
-        padding: 1px;
-        border-radius: 2px;
-    }
-    hr {
-        background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.75), rgba(255,255,255,0));
+    .desc {
+        font-size: 0.9rem;
+        padding-left: 0.75rem;
     }
 }
