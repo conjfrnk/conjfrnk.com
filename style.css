@@ -315,6 +315,9 @@ hr {
 .project-card .project-detail a {
     color: var(--green-secondary);
 }
+.project-card .project-detail a:hover {
+    color: var(--gold-muted);
+}
 
 /* ===== Interests Section ===== */
 .interests-grid {
