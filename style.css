@@ -318,6 +318,13 @@ hr {
 .project-card .project-detail a:hover {
     color: var(--gold-muted);
 }
+.project-card .project-icon {
+    float: right;
+    width: 56px;
+    height: 56px;
+    margin: 0 0 0.5rem 0.75rem;
+    border-radius: 12px;
+}
 
 /* ===== Interests Section ===== */
 .interests-grid {
