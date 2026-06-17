@@ -253,7 +253,7 @@ section{padding:84px 0}
   .tl-row{grid-template-columns:96px 1fr;gap:16px}
   .post{flex-direction:column;align-items:flex-start;gap:8px}
   section{padding:60px 0}
-  .foot-inner{justify-content:center;text-align:center}
+  .foot-inner{flex-direction:column;justify-content:center;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
