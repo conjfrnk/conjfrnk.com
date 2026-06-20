@@ -53,3 +53,8 @@ td.completed {
     padding: 0 0.2em;
     font-weight: bold;
 }
+
+@media (prefers-reduced-motion: reduce) {
+    .progress-bar { transition: none; }
+    table.progress a:hover { border-color: var(--gold); }
+}

@@ -14,14 +14,14 @@
 
 :root{
   --cream:#F1EAD9; --cream-2:#E7DCC6; --white:#FBF7EF;
-  --green:#1B5E3B; --green-deep:#123A26;
+  --green:#1B5E3B; --green-deep:#123A26; --moss:#3D6B4F;
   --gold:#C4A94F; --gold-deep:#A8893C;
   --terra:#A8472E; --terra-deep:#7E3320;
   --ink:#20261D; --ink-2:#283021;
   --text-dark:#262B22; --text-soft:#5a6052; --text-light:#EEE7D7; --text-muted:#A7AC9D;
   /* aliases consumed by euler/euler.css (legacy variable names) */
   --green-primary:#1B5E3B; --green-secondary:#2A7A4F; --green-muted:#9AA78F;
-  --bg-dark-card:#E7DCC6; --text-white:#F1EAD9; --text-light-gray:#5A6052;
+  --bg-dark-card:#E7DCC6; --text-white:#F1EAD9; --text-light-gray:#5a6052;
   --display:Futura,'Jost','Century Gothic','Twentieth Century MT','Avenir Next','Trebuchet MS',system-ui,sans-serif;
   --body:Calibri,'Segoe UI','Gill Sans',system-ui,sans-serif;
   --maxw:1120px;
@@ -34,7 +34,6 @@ body{background:var(--cream);color:var(--text-dark);font-family:var(--body);line
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
-.caps{font-family:var(--display);text-transform:uppercase;letter-spacing:.18em}
 
 /* ---- accessibility ---- */
 .skip{position:absolute;left:-9999px;top:auto}
@@ -152,7 +151,6 @@ section{padding:84px 0}
 /* ---- truthful band (replaces fake stats) ---- */
 .band{text-align:center}
 .band p{font-family:var(--display);text-transform:uppercase;letter-spacing:.1em;font-weight:700;font-size:clamp(1rem,2.2vw,1.4rem);color:var(--cream);line-height:1.5;max-width:24em;margin:0 auto}
-.band .accent{color:var(--gold)}
 .band .vb{color:var(--gold)}
 .band .vw{color:#FBF7EF}
 .band .vr{color:#E0926A}
@@ -199,20 +197,6 @@ section{padding:84px 0}
 .page .kicker{margin-bottom:10px}
 .page-title{font-family:var(--display);text-transform:uppercase;letter-spacing:.05em;font-weight:700;font-size:clamp(2rem,4.5vw,3rem);color:var(--ink);line-height:1;margin-bottom:14px}
 .page-lede{color:var(--text-soft);max-width:44em;margin-bottom:18px}
-.back-link{display:inline-flex;align-items:center;gap:8px;font-family:var(--display);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--green);margin-bottom:30px;transition:gap .2s var(--ease),color .2s}
-.back-link:hover{gap:14px;color:var(--terra)}
-.prose{max-width:46em;font-size:1.02rem;color:var(--text-dark)}
-.prose h2{font-family:var(--display);text-transform:uppercase;letter-spacing:.04em;color:var(--green);font-size:1.4rem;margin:32px 0 12px}
-.prose p{margin-bottom:14px}
-.prose a{color:var(--green);border-bottom:1px solid var(--gold)}
-.prose a:hover{color:var(--terra);border-color:var(--terra)}
-.prose ul{padding-left:1.2rem;margin-bottom:14px}
-.prose li{margin-bottom:6px}
-.tile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:2px;background:var(--ink);border:2px solid var(--ink)}
-.tile{background:var(--white);padding:24px;position:relative}
-.tile::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--gold)}
-.tile h3{font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;color:var(--ink);font-size:1.05rem;margin-bottom:6px}
-.tile p{font-size:.9rem;color:var(--text-soft)}
 
 /* ===================================================================
    ANIMATIONS
@@ -291,23 +275,9 @@ header:not(.bar) h1{font-family:var(--display);text-transform:uppercase;letter-s
 .home-link a{display:inline-block;font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-weight:700;font-size:.8rem;color:var(--cream)!important;background:var(--green);border:none!important;padding:14px 30px;transition:background .2s}
 .home-link a:hover{background:var(--green-deep);color:var(--cream)!important}
 
-/* minigolf timeline */
-.entry.row{display:grid;grid-template-columns:120px 1fr;gap:22px;padding:18px 0;border-bottom:1px solid rgba(32,38,29,.14);align-items:start}
-.entry.row .timespan{font-family:var(--display);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-deep);font-weight:700;text-align:left}
-.entry.row .ico{display:none}
-.entry.row .desc{color:var(--text-soft);font-size:.95rem;line-height:1.6}
-
-/* minigolf link cards */
-.project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:2px;background:var(--ink);border:2px solid var(--ink);margin-top:10px}
-.project-card{background:var(--white);padding:22px 24px;position:relative}
-.project-card::before{content:"";position:absolute;top:0;left:0;right:0;height:6px;background:var(--gold)}
-.project-name{font-family:var(--display);text-transform:uppercase;letter-spacing:.03em;font-weight:700;font-size:1rem;color:var(--ink)}
-.project-name a{color:var(--green)}
-
 @media(max-width:600px){
   .container{padding-left:20px;padding-right:20px}
   .lightgroup ul,.darkgroup ul{columns:1}
-  .entry.row{grid-template-columns:84px 1fr;gap:14px}
 }
 
 /* ===================================================================
@@ -335,4 +305,16 @@ header:not(.bar) h1{font-family:var(--display);text-transform:uppercase;letter-s
 @media(max-width:600px){
   .book-list{columns:1}
   .year-block{padding:36px 0}
+}
+
+/* ===================================================================
+   PRINT
+   =================================================================== */
+@media print{
+  *{background:transparent!important;color:#000!important;box-shadow:none!important;filter:none!important}
+  .bar,.bar2,.bar3,.nav,.nav-toggle,.foot,.cta,.glass,.home-link,.skip{display:none!important}
+  a{color:#000!important;text-decoration:underline}
+  section,.section-light,.section-dark{padding:12px 0!important}
+  .tl-row,.book,table.progress{break-inside:avoid}
+  table.progress td,table.progress td *{border-color:#000!important}
 }

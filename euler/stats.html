@@ -7,7 +7,7 @@
         <title>Project Euler Stats — Connor Frank</title>
         <meta name="description" content="Connor Frank's Project Euler problem-solving progress, tracking solved problems and difficulty distribution.">
         <link rel="canonical" href="https://conjfrnk.com/euler/stats.html">
-        <meta name="theme-color" content="#191E19">
+        <meta name="theme-color" content="#1B5E3B">
         <link rel="icon" href="/favicon.ico" sizes="any">
         <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -27,12 +27,12 @@
         <meta name="twitter:image" content="https://conjfrnk.com/assets/me-og.jpg">
         <link rel="preconnect" href="https://www.googletagmanager.com">
         <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
-        <link href="../style.css?v=9e719790" rel="stylesheet" type="text/css"/>
-        <link href="euler.css?v=14b685ed" rel="stylesheet" type="text/css"/>
-        <script src="progressbar.js?v=afa00637" defer></script>
+        <link href="../style.css?v=579d01ac" rel="stylesheet" type="text/css"/>
+        <link href="euler.css?v=c4878cc6" rel="stylesheet" type="text/css"/>
+        <script src="progressbar.js?v=fb9b9aa5" defer></script>
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-C5K7744E4T"></script>
-        <script>
+        <script nonce="analytics">
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
@@ -44,20 +44,18 @@
         <div class="container" id="dhead">
             <h1>Project Euler Stats</h1>
             <br>
-            <a href="https://projecteuler.net"><img src="https://projecteuler.net/profile/conjfrnk.png" width=200 height=60 alt="Link to Project Euler" loading="lazy" class="projecteuler" /></a>
+            <a href="https://projecteuler.net"><img src="https://projecteuler.net/profile/conjfrnk.png" width=200 height=60 alt="Connor Frank's Project Euler progress badge" class="projecteuler" /></a>
         </div>
         </header>
         <main id="main">
         <div class="section-light">
             <div class="container">
                 <div class="ctitle">Progress</div>
-                <div class="progress-container" role="progressbar" aria-label="Euler progress">
+                <div class="progress-container" role="progressbar" aria-label="Euler progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
                     <div class="progress-bar" id="progressBar" aria-live="polite">0%</div>
                 </div>
-                <script></script>
                 <br>
                  <table class="progress">
-                    <caption>Problems 301–400</caption>
                     <caption>Problems 1–100</caption>
                     <tr>
                         <td class="completed"><a href="https://projecteuler.net/problem=1" title="Multiples of 3 or 5">1</a></td>
@@ -181,7 +179,7 @@
                     </tr>
                 </table>
                  <table class="progress">
-                    <caption>Problems 401–500</caption>
+                    <caption>Problems 101–200</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=101" title="Optimum Polynomial">101</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=102" title="Triangle Containment">102</a></td>
@@ -304,7 +302,7 @@
                     </tr>
                 </table>
                  <table class="progress">
-                    <caption>Problems 501–600</caption>
+                    <caption>Problems 201–300</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=201" title="Subsets with a Unique Sum">201</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=202" title="Laserbeam">202</a></td>
@@ -427,7 +425,7 @@
                     </tr>
                 </table>
                  <table class="progress">
-                    <caption>Problems 601–700</caption>
+                    <caption>Problems 301–400</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=301" title="Nim">301</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=302" title="Strong Achilles Numbers">302</a></td>
@@ -550,7 +548,7 @@
                     </tr>
                 </table>
                  <table class="progress">
-                    <caption>Problems 701–800</caption>
+                    <caption>Problems 401–500</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=401" title="Sum of Squares of Divisors">401</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=402" title="Integer-valued Polynomials">402</a></td>
@@ -673,7 +671,7 @@
                     </tr>
                 </table>
                  <table class="progress">
-                    <caption>Problems 801–900</caption>
+                    <caption>Problems 501–600</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=501" title="Eight Divisors">501</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=502" title="Counting Castles">502</a></td>
@@ -796,7 +794,7 @@
                     </tr>
                 </table>
                 <table class="progress">
-                    <caption>Problems 901–1000</caption>
+                    <caption>Problems 601–700</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=601" title="Divisibility Streaks">601</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=602" title="Product of Head Counts">602</a></td>
@@ -919,6 +917,7 @@
                     </tr>
                 </table>
                 <table class="progress">
+                    <caption>Problems 701–800</caption>
                     <tr><td class="open"><a href="https://projecteuler.net/problem=701" title="Random Connected Area">701</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=702" title="Jumping Flea">702</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=703" title="Circular Logic II">703</a></td>
@@ -1040,6 +1039,7 @@
                     </tr>
                 </table>
                 <table class="progress">
+                    <caption>Problems 801–887</caption>
                     <tr>
                         <td class="open"><a href="https://projecteuler.net/problem=801" title="$x^y \equiv y^x$">801</a></td>
                         <td class="open"><a href="https://projecteuler.net/problem=802" title="Iterated Composition">802</a></td>
@@ -1155,5 +1155,4 @@
             </div>
         </div>
     </body>
-    <script src="progressbar.js?v=afa00637"></script>
 </html>
