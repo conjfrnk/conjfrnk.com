@@ -55,7 +55,12 @@ for year, year_df in books_df.groupby("Year", sort=False):
     items = ""
     for _, row in year_df.iterrows():
         title = row["Book"]
-        author = row["Author"]
+        # Normalize the author field only (titles are left untouched):
+        # multi-author connectors -> comma, and "Ph.D." -> "PhD".
+        author = str(row["Author"])
+        author = re.sub(r"\s*&\s*", ", ", author)
+        author = re.sub(r",?\s+and\s+", ", ", author)
+        author = author.replace("Ph.D.", "PhD").replace("Ph.D", "PhD")
         pages = f"{int(row['Pages']):,}"  # Format pages with commas
         items += (
             f'        <li class="book"><span class="bk-title">{title}</span>'
